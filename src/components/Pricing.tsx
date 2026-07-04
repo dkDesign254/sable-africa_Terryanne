@@ -1,3 +1,6 @@
+import { useState } from "react";
+import CheckoutModal from "~/components/CheckoutModal";
+
 const tiers = [
   {
     name: "Free",
@@ -49,6 +52,8 @@ const tiers = [
 ];
 
 export default function Pricing() {
+  const [checkoutPlan, setCheckoutPlan] = useState<typeof tiers[0] | null>(null);
+
   return (
     <section id="subscribe" className="bg-light-grey py-20 dark:bg-sable-black/95 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -150,16 +155,16 @@ export default function Pricing() {
               </ul>
 
               {/* CTA */}
-              <a
-                href="#"
-                className={`mt-8 block rounded-full py-3 text-center font-body text-xs font-semibold tracking-widest uppercase transition-all ${
+              <button
+                onClick={() => setCheckoutPlan(tier)}
+                className={`mt-8 block w-full rounded-full py-3 text-center font-body text-xs font-semibold tracking-widest uppercase transition-all hover:scale-[1.02] ${
                   tier.featured
                     ? "bg-muted-gold text-sable-black hover:bg-muted-gold/90"
                     : "border border-muted-gold/30 text-sable-black hover:bg-muted-gold/5 dark:text-warm-ivory dark:hover:bg-muted-gold/10"
                 }`}
               >
                 {tier.cta}
-              </a>
+              </button>
             </div>
           ))}
         </div>
@@ -170,6 +175,15 @@ export default function Pricing() {
           pricing based on seat count and scope of engagement.
         </p>
       </div>
+
+      {/* Checkout Modal */}
+      {checkoutPlan && (
+        <CheckoutModal
+          isOpen={true}
+          onClose={() => setCheckoutPlan(null)}
+          plan={checkoutPlan}
+        />
+      )}
     </section>
   );
 }

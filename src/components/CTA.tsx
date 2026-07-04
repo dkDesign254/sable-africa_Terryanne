@@ -32,14 +32,14 @@ export default function CTA() {
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href="#subscribe"
-              className="rounded-full bg-muted-gold px-8 py-3.5 font-body text-sm font-semibold tracking-wider text-sable-black uppercase transition-all hover:bg-muted-gold/90"
+              href="#newsletter"
+              className="rounded-full bg-muted-gold px-8 py-3.5 font-body text-sm font-semibold tracking-wider text-sable-black uppercase transition-all hover:bg-muted-gold/90 hover:scale-[1.03] active:scale-[0.98]"
             >
               Subscribe to Daily Brief
             </a>
             <a
               href="#intelligence"
-              className="rounded-full border border-muted-gold/30 px-8 py-3.5 font-body text-sm font-semibold tracking-wider text-sable-black dark:text-warm-ivory uppercase transition-all hover:border-muted-gold/60 hover:bg-muted-gold/5"
+              className="rounded-full border border-muted-gold/30 px-8 py-3.5 font-body text-sm font-semibold tracking-wider text-sable-black dark:text-warm-ivory uppercase transition-all hover:border-muted-gold/60 hover:bg-muted-gold/5 hover:scale-[1.03] active:scale-[0.98]"
             >
               View Intelligence Dashboard
             </a>

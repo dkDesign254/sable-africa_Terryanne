@@ -12,6 +12,7 @@ import SableWeekend from "~/components/SableWeekend";
 import WhySable from "~/components/WhySable";
 import Pricing from "~/components/Pricing";
 import CTA from "~/components/CTA";
+import NewsletterSection from "~/components/NewsletterSection";
 import Footer from "~/components/Footer";
 import AIAssistant from "~/components/AIAssistant";
 
@@ -65,6 +66,7 @@ function Home() {
         <SableWeekend />
         <WhySable />
         <Pricing />
+        <NewsletterSection />
         <CTA />
       </main>
       <Footer />

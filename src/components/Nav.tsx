@@ -6,7 +6,7 @@ const navItems = [
   { label: "Intelligence", href: "#intelligence" },
   { label: "Investigations", href: "#investigations" },
   { label: "Weekend", href: "#weekend" },
-  { label: "About", href: "#about" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Nav() {
@@ -58,7 +58,7 @@ export default function Nav() {
               <a
                 key={item.href}
                 href={item.href}
-                className="font-body text-sm font-medium tracking-wide text-slate-grey dark:text-warm-ivory/80 transition-colors hover:text-muted-gold"
+                className="relative font-body text-sm font-medium tracking-wide text-slate-grey dark:text-warm-ivory/80 transition-colors hover:text-muted-gold after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-muted-gold after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.label}
               </a>
@@ -108,8 +108,8 @@ export default function Nav() {
 
             {/* Subscribe button */}
             <a
-              href="#subscribe"
-              className="hidden rounded-full bg-muted-gold px-5 py-2 font-body text-xs font-semibold tracking-widest text-sable-black uppercase transition-all hover:bg-muted-gold/90 md:block"
+              href="#newsletter"
+              className="hidden rounded-full bg-muted-gold px-5 py-2 font-body text-xs font-semibold tracking-widest text-sable-black uppercase transition-all hover:bg-muted-gold/90 hover:scale-[1.03] md:block"
             >
               Subscribe
             </a>
@@ -153,9 +153,9 @@ export default function Nav() {
                 </a>
               ))}
               <a
-                href="#subscribe"
+                href="#newsletter"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 inline-block self-start rounded-full bg-muted-gold px-5 py-2 font-body text-xs font-semibold tracking-widest text-sable-black uppercase transition-all hover:bg-muted-gold/90"
+                className="mt-2 inline-block self-start rounded-full bg-muted-gold px-5 py-2 font-body text-xs font-semibold tracking-widest text-sable-black uppercase transition-all hover:bg-muted-gold/90 hover:scale-[1.03]"
               >
                 Subscribe
               </a>
